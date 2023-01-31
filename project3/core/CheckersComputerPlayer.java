@@ -1,7 +1,13 @@
 package core;
 
 import java.util.ArrayList;
+/**
+CheckersComputerPlayer class is a subclass of Player class. 
+It is used to represent the computer player in the game.
 
+@author Jose Solis
+@version 1.0
+ */
 public class CheckersComputerPlayer extends Player{
     ComputerMove computerMove;
     Board board;
@@ -11,27 +17,64 @@ public class CheckersComputerPlayer extends Player{
         this.board = board;
         this.computerMove = null;
     }
+    /**
+    This method is used to get the computer's current row position.
+    The row is returned in user input format ie 3c-4d.
 
+    @return int
+     */
     public int getCurrentRow(){
         return computerMove.getCurrentRow();
     }
+    
+    /**
+    This method is used to get the computer's current column position.
+    The column is returned in user input format ie 3c-4d.
 
+    @return String
+     */
     public String getCurrentCol(){
         return computerMove.getCurrentCol();
     }
 
+    /**
+    This method is used to get the computer's next row position.
+    The row is returned in user input format ie 3c-4d.
+
+    @return int
+     */
     public int getNextRow(){
         return computerMove.getNextRow();
     }
 
+    /**
+    This method is used to get the computer's next column position.
+    The column is returned in user input format ie 3c-4d.
+
+    @return String
+     */
     public String getNextCol(){
         return computerMove.getNextCol();
     }
 
+    /**
+    This method is used to get the computer's move (start-end).
+    The row is returned in user input format ie 3c-4d.
+    Useful to display to the user the computer's move.
+    This should be called after the imitatePlayerMove() method to get most recent move.
+
+    @return String
+     */
     public String getFormattedMove(){
         return this.computerMove.toString();
     }
+    /**
+    This method is used by the game logic to perform the computer's move.
+    This algorithm prioritzes capturing moves over moving forward.
+    The algorithm also prioritzes left moves over right moves.
+    It is a naive algorithm that selects the first pawn that can capture or move forward.
 
+     */
     public void imitatePlayerMove(){
         Pawn pawn = null;
         boolean isCaptureMove = false;

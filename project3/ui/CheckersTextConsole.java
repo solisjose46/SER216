@@ -3,8 +3,23 @@ import java.util.Scanner;
 import java.lang.Integer;
 import core.CheckersLogic;
 
-class CheckersTextConsole{
+/***
+CheckersTextConsole class is used to provide a text based ui for the checkers game.
+It prints the board and prompts the user for input.
+It uses the core.CheckersLogic class to validate the user input and determine if the move is valid.
 
+@author Jose Solis
+@version 1.0
+ */
+
+
+class CheckersTextConsole{
+    /***
+    This method is used to print the board to the console.
+    It uses the CheckersLogic class to get the board state.
+    
+    @param game The CheckersLogic object that is used to get the board state.
+     */
     public static void printBoard(CheckersLogic game){
         for(Integer i = 8; i > 0; i--){
             System.out.print(i.toString() + "|");
@@ -24,6 +39,12 @@ class CheckersTextConsole{
         System.out.println("  a b c d e f g h ");
     }
 
+    /***
+    This method is used to get the user input and operate on it.
+    It runs in a loop until the game is over.
+    
+    @param args The command line arguments.
+     */
     public static void main(String[] args){
         boolean playerOneTurn = true;
         boolean gameIsOver = false;

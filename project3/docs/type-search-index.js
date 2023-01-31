@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"core","l":"Board"},{"p":"core","l":"CheckersComputerPlayer"},{"p":"core","l":"CheckersLogic"},{"p":"core","l":"ComputerMove"},{"p":"core","l":"Direction"},{"p":"core","l":"Player"}]
