@@ -1,0 +1,9 @@
+Compiles with javac 11.0.17
+Runs with 
+    openjdk version "11.0.17" 2022-10-18
+    OpenJDK Runtime Environment (build 11.0.17+8-post-Ubuntu-1ubuntu222.04)
+    OpenJDK 64-Bit Server VM (build 11.0.17+8-post-Ubuntu-1ubuntu222.04, mixed mode, sharing)
+
+Comile with javac ui/CheckersTextConsole.java core/*.java
+Run with java ui.CheckersTextConsole
+
